@@ -5,8 +5,8 @@ import Logo from '../../public/img/github-logo.png'
 
 function Index() {
   return (
-    <div className="flex align-middle justify-items-center mt-20 mb-24 mx-60">
-      <div className="lg:w-1/2">
+    <div className="flex mt-20 mb-24 mx-80">
+      <div className="lg:w-1/2 flex">
         <Image 
           src={ Img }
           width={ 300 }
@@ -20,10 +20,10 @@ function Index() {
       <div className="lg:w-2/3 align-middle justify-between mt-10">
         <h1 className="font-bold text-4xl">Marcos Aaron Castro Rivas</h1>
 
-        <div className="flex align-middle mt-8 ml-16 mb-10"> 
+        <div className="flex align-middle justify-between mt-8 mb-10"> 
           <div className="lg:w-1/3"></div>
 
-          <div className="lg:w-1/3">
+          <div className="lg:w-1/3 align-middle justify-between">
               <Link
                 href='https://github.com/MarcosA00'
               >
@@ -33,7 +33,7 @@ function Index() {
                   height={ 60 }
                   alt="Logo github"
                   priority
-                  className="mt-5 mb "
+                  className="mt-5  -ml-10"
                 />
                 Github
               </Link>
