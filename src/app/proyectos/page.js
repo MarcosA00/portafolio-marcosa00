@@ -1,11 +1,13 @@
 import Proyecto from "@/components/Proyecto";
 
+export const metadata = {
+  title: 'Proyectos'
+}
+
 function Proyectos() {
   return (
-    <div className="mx-40 flex mt-10">
-      <div className="lg:w-1/4 "></div>
-
-      <div className="lg:w-2/4 mx-40">
+    <div className="m-14 mb-[5.5rem] justify-center">
+      <div className="flex items-center gap-x-5 overflow-x-scroll snap-x mx-80">
         <Proyecto 
           titulo = { 'Gestor de Citas' }
           img = { '/img/gestor-citas.png' }
@@ -17,7 +19,7 @@ function Proyectos() {
           titulo = { 'Control de Gastos' }
           img = { '/img/control-gastos.png' }
           descripcion = { 'Gestor de Gastos, CRUD' }
-          url = { 'https://control-de-gastos-y-presupuesto.netlify.app/' }
+          url = { '/proyectos/control-gastos' }
         />
         
         <Proyecto 
@@ -34,8 +36,6 @@ function Proyectos() {
           url = { 'https://amazing-marzipan-ea5d77.netlify.app/' }
         />
       </div>
-
-      <div className="lg:w-1/4"></div>
     </div>
   )
 }

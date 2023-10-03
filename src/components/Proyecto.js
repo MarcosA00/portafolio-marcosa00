@@ -8,8 +8,8 @@ function Proyecto({
   url 
 }) {
   return (
-    <div>
-      <div className="bg-white mb-10 rounded-md p-5 justify-center flex shadow">
+    <div className="snap-center min-w-[75%]">
+      <div className="bg-white mb-10 rounded-md p-5 flex shadow justify-center object-cover">
         <Link
           href={ url }
         >
@@ -21,7 +21,7 @@ function Proyecto({
             height={ 300 }
             priority
             alt="Imagen proyecto"
-            className="mb-5 rounded-md shadow"
+            className="mb-5 rounded-md shadow w-auto h-auto"
           />
 
           <p className="text-center text-xl">{ descripcion }</p>

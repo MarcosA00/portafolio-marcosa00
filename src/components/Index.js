@@ -5,8 +5,8 @@ import Logo from '../../public/img/github-logo.png'
 
 function Index() {
   return (
-    <div className="flex mt-20 mb-24 mx-80">
-      <div className="lg:w-1/2 flex">
+    <div className="flex my-[9.75rem] mx-80">
+      <div className="lg:w-1/2">
         <Image 
           src={ Img }
           width={ 300 }
@@ -17,40 +17,30 @@ function Index() {
         />
       </div>
 
-      <div className="lg:w-2/3 align-middle justify-between mt-10">
-        <h1 className="font-bold text-4xl">Marcos Aaron Castro Rivas</h1>
+      <div className="lg:w-2/3 text-center">
+        <h1 className="font-bold text-4xl text-center mt-10">Marcos Aaron Castro Rivas</h1>
 
-        <div className="flex align-middle justify-between mt-8 mb-10"> 
-          <div className="lg:w-1/3"></div>
+        <Link
+          href='https://github.com/MarcosA00'
+          className="mx-auto text-center text-lg font-bold"
+        >
+          <Image 
+            src={ Logo }
+            width={ 60 }
+            height={ 60 }
+            alt="Logo github"
+            priority
+            className="mx-auto mt-10"
+          />
 
-          <div className="lg:w-1/3 align-middle justify-between">
-              <Link
-                href='https://github.com/MarcosA00'
-              >
-                <Image 
-                  src={ Logo }
-                  width={ 60 }
-                  height={ 60 }
-                  alt="Logo github"
-                  priority
-                  className="mt-5  -ml-10"
-                />
-                Github
-              </Link>
-          </div>
+          Github
+        </Link>
 
-          <div className="lg:w-1/3"></div>
-        </div>
-
-        <div className="flex -ml-5">
-          <div className="lg:w-1/3"></div>
-
+        <div className="mt-10">
           <Link
             href='/contacto'
-            className="lg:w-1/3 bg-red-500 w-full p-3 text-white text-center uppercase font-bold rounded-md hover:bg-red-700 cursor-pointer transition-all mx-5 shadow-md"
+            className="bg-red-500 mx-auto p-3 text-white text-center uppercase font-bold rounded-md hover:bg-red-700 cursor-pointer transition-all shadow-md"
           >Contáctame</Link>
-
-          <div className="lg:w-1/3"></div>
         </div>
       </div>
     </div>
