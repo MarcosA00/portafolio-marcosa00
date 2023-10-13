@@ -17,8 +17,8 @@ function Index() {
         />
       </div>
 
-      <div className="lg:w-2/3 text-center">
-        <h1 className="font-bold text-4xl text-center mt-10">Marcos Aaron Castro Rivas</h1>
+      <div className="lg:w-2/3 text-center mx-20">
+        <h1 className="font-bold text-4xl text-center">Marcos Aaron Castro Rivas</h1>
 
         <Link
           href='https://github.com/MarcosA00'
