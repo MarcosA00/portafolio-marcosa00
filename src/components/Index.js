@@ -5,8 +5,8 @@ import Logo from '../../public/img/github-logo.png'
 
 function Index() {
   return (
-    <div className="flex my-[9.75rem] mx-80">
-      <div className="lg:w-1/2">
+    <div className="flex flex-col justify-center items-center md:flex-row">
+      <div className="lg:w-1/2 flex justify-center items-center">
         <Image 
           src={ Img }
           width={ 300 }
@@ -17,7 +17,7 @@ function Index() {
         />
       </div>
 
-      <div className="lg:w-2/3 text-center">
+      <div className="lg:w-1/2 text-center flex-row">
         <h1 className="font-bold text-4xl text-center mt-10">Marcos Aaron Castro Rivas</h1>
 
         <Link
