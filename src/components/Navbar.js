@@ -1,33 +1,101 @@
+'use client'
 import Link from "next/link";
+import { useState } from "react"
 
-function Navbar() {
+export default function Navbar() {
+  const [menuAbierto, setMenuAbierto] = useState(false)
   return (
-    <div className="border-b border-gray-300">
-      <nav className="justify-center items-center m-5">
-        <div className="flex justify-around items-center text-center">
-          <Link 
-            href='/'
-            className="bg-indigo-500 p-2 text-white uppercase font-bold rounded-md shadow-md hover:bg-indigo-700 cursor-pointer transition-all"
-          >Inicio</Link>
+    <header className="sticky top-0 z-50 w-full border-b bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/60">
+      <div className="container flex h-20 items-center justify-between">
+        {/* Menú para pantallas grandes */}
+        <nav className="hidden md:flex mx-auto items-center justify-center gap-6">
+          {
+            navigation.map((item) => (
+              <Link
+                href={item.href}
+                key={item.name}
+                className="text-lg font-medium hover:text-club-secondary hover:font-semibold hover:underline hover:text-blue-500 transition-colors">
+                {item.name}
+              </Link>
+            ))
+          }
+        </nav>
 
-          <Link 
-            href='/sobre-mi'
-            className="bg-indigo-500 p-2 text-white uppercase font-bold rounded-md shadow-md hover:bg-indigo-700 cursor-pointer transition-all"
-          >Sobre mí</Link>
+        {/* Botón de menú móvil */}
+        <button
+          onClick={() => setMenuAbierto(!menuAbierto)}
+          className="md:hidden text-club-primary focus:outline-none focus:ring-2 focus:ring-club-primary"
+          aria-label="Abrir menú"
+        >
+          ☰
+        </button>
+      </div>
 
-          <Link 
-            href='/proyectos'
-            className="bg-indigo-500 p-2 text-white uppercase font-bold rounded-md shadow-md hover:bg-indigo-700 cursor-pointer transition-all"
-          >Proyectos</Link>
-
-          <Link 
-            href='/contacto'
-            className="bg-indigo-500 p-2 text-white uppercase font-bold rounded-md shadow-md hover:bg-indigo-700 cursor-pointer transition-all"
-          >Contacto</Link>
+      {/* Menú desplegable para móviles */}
+      {menuAbierto && (
+        <div className="md:hidden bg-background border-t">
+          <nav className="flex flex-col gap-4 p-4">
+            <Link
+              href="/"
+              className="text-sm font-medium hover:text-club-secondary transition-colors"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Inicio
+            </Link>
+            <Link
+              href="#destinos"
+              className="text-sm font-medium hover:text-club-secondary transition-colors"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Destinos
+            </Link>
+            <Link
+              href="#servicios"
+              className="text-sm font-medium hover:text-club-secondary transition-colors"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Servicios
+            </Link>
+            <Link
+              href="#testimonios"
+              className="text-sm font-medium hover:text-club-secondary transition-colors"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Testimonios
+            </Link>
+            <Link
+              href="/resenas"
+              className="text-sm font-medium hover:text-club-secondary transition-colors"
+              onClick={() => setMenuAbierto(false)}
+            >
+              Reseñas
+            </Link>
+          </nav>
         </div>
-      </nav>
-    </div>
+      )}
+    </header>
   )
 }
 
-export default Navbar;
+export const navigation = [
+  {
+    name: "Inicio",
+    href: "/",
+    current: true,
+  },
+  {
+    name: "Sobre mi",
+    href: "#about",
+    current: false,
+  },
+  {
+    name: "Proyectos",
+    href: "#proyects",
+    current: false,
+  },
+  {
+    name: "Contacto",
+    href: "#testimonios",
+    current: false,
+  }
+]

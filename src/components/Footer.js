@@ -1,4 +1,8 @@
 import Link from "next/link"
+import Image from "next/image"
+
+import Img from '../../public/img/photo.jpeg'
+import { FaGithub } from "react-icons/fa"
 
 function Footer() {
   return (
