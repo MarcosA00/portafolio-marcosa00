@@ -3,6 +3,9 @@ import Link from "next/link"
 
 import Imagen from '../../public/img/photo.jpeg'
 import { FaGithub } from "react-icons/fa"
+import { DiCss3, DiHtml5, DiJavascript1, DiReact } from "react-icons/di"
+import { RiBootstrapFill, RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
+import { BsThreeDots } from "react-icons/bs"
 import Card from "@/components/ui/Card"
 import MainCard from "@/components/ui/MainCard"
 import { proyectos } from "@/data/proyectos"
@@ -45,7 +48,7 @@ export default function Home() {
         <div id="about" />
       </main>
 
-      <section className="flex flex-col items-center gap-5 my-10 text-wrap">
+      <section className="flex flex-col items-center gap-8 my-10 text-wrap">
         <h2 className="text-3xl font-bold">Sobre mí</h2>
         <p className="text-lg text-center max-w-xl">
           Soy un desarrollador frontend Mexicano apasionado por crear aplicaciones y sitios web que mejoren la experiencia del usuario. Me encanta aprender nuevas tecnologías y enfrentar desafíos en el desarrollo de software.
@@ -53,7 +56,16 @@ export default function Home() {
         <p className="text-lg text-center max-w-xl">
           Tengo experiencia en HTML, CSS, JavaScript y React, y siempre estoy buscando mejorar mis habilidades y aprender nuevas herramientas para ofrecer soluciones innovadoras.
         </p>
-        <br />
+        <div className="grid grid-cols-4 gap-4 text-6xl">
+          <DiHtml5 className="w-16 h-16 text-amber-300"/>
+          <DiCss3 className="w-16 h-16 text-blue-700"/>
+          <DiJavascript1 className="w-16 h-16 text-amber-300"/>
+          <DiReact className="w-16 h-16 text-blue-400"/>
+          <RiNextjsFill className="w-16 h-16 text-black"/>
+          <RiRemixRunFill className="w-16 h-16 text-black"/>
+          <RiTailwindCssFill className="w-16 h-16 text-blue-400"/>
+          <RiBootstrapFill className="w-16 h-16 text-purple-600"/>
+        </div>
         <h2 className="text-3xl font-bold mb-2">Experiencias relevantes:</h2>
         <div className="flex flex-col items-center w-full gap-5">
           {
