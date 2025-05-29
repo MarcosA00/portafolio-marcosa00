@@ -24,7 +24,8 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   key={item.name}
-                  className={"text-lg font-medium hover:text-club-secondary hover:font-semibold hover:underline hover:text-blue-500 transition-colors} " + (isActive == item.href ? "text-club-secondary font-semibold underline" : "")}>
+                  className={"text-lg font-medium hover:text-club-secondary hover:font-semibold hover:underline hover:text-blue-500 transition-colors} " + (isActive == item.href ? "text-club-secondary font-semibold underline" : "")}
+                >
                   {item.name}
                 </Link>
               ))
