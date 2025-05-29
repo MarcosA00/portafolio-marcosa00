@@ -10,6 +10,7 @@ import Card from "@/components/ui/Card"
 import MainCard from "@/components/ui/MainCard"
 import { proyectos } from "@/data/proyectos"
 import { experience } from "@/data/experience"
+import Form from "@/components/Form"
 
 export default function Home() {
   return (
@@ -100,6 +101,10 @@ export default function Home() {
           ))}
         </div>
       </section>
+
+      <div id="contact" className="h-10"> </div>
+
+      <Form />
     </div>
   )
 }

@@ -16,7 +16,7 @@ export const navigation = [
   },
   {
     name: "Contacto",
-    href: "#testimonios",
+    href: "#contact",
     current: false,
   }
 ]

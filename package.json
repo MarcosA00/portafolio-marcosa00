@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/themes": "^3.2.1",
+    "@sendgrid/mail": "^8.1.5",
     "clsx": "^2.1.1",
     "lucide-react": "^0.511.0",
     "next": "latest",
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.1.8",
+    "@types/node": "22.15.24",
+    "@types/react": "19.1.6",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
