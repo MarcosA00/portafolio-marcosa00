@@ -37,12 +37,12 @@ export default function Home() {
             <Link
               href='#contacto'
               className="w-36 bg-red-500 p-3 text-lg text-white text-center uppercase font-bold rounded-md hover:bg-red-700 cursor-pointer transition-all shadow-md"
-              id="about"
             >
               Contáctame
             </Link>
           </div>
         </div>
+        <div id="about" />
       </main>
 
       <section className="flex flex-col items-center gap-5 my-10 text-wrap">
@@ -54,21 +54,22 @@ export default function Home() {
           Tengo experiencia en HTML, CSS, JavaScript y React, y siempre estoy buscando mejorar mis habilidades y aprender nuevas herramientas para ofrecer soluciones innovadoras.
         </p>
         <br />
-        <h2 className="text-3xl font-bold">Experiencias relevantes:</h2>
-        <div id="proyect" className="grid grid-cols1 md:grid-cols-2 w-full">
-          {/* {
-            experience.map((exp, index) => (
+        <h2 className="text-3xl font-bold mb-2">Experiencias relevantes:</h2>
+        <div className="flex flex-col items-center w-full gap-5">
+          {
+            experience.map((experience, index) => (
               <MainCard
+                title={experience.title}
                 key={index}
-                title={exp.title}
-                company={exp.company}
-                location={exp.location}
-                date={exp.date}
-                img={exp.img}
-                description={exp.description}
+                company={experience.company}
+                location={experience.location}
+                date={experience.date}
+                img={experience.img}
+                description={experience.description}
               />
             ))
-          } */}
+          }
+          <div id="proyects"></div>
         </div>
       </section>
 

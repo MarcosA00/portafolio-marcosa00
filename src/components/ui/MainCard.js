@@ -1,37 +1,45 @@
+'use client'
+import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
+
 import Placeholder from '../../../public/img/placeholder.svg'
 
 export default function Card({ title, company, location, date, img, description }) {
+  const [trunc, setTrunc] = useState(true)
+
+  const toggleTruncate = () => {
+    setTrunc(!trunc)
+  }
+
   return (
-    <article className="group relative flex flex-col justify-end overflow-hidden rounded-2xl shadow-xl border border-gray-200 bg-white hover:shadow-2xl transition-all duration-300 min-h-[340px]">
-      {/* Imagen de fondo */}
-      <div className="absolute inset-0">
+    <article className="w-[400px] relative bg-gradient-to-t from-black/80 via-black/30 to-transparent text-white rounded-lg shadow-lg overflow-hidden">
+      <div className="relative w-full h-48">
         <Image
           src={img || Placeholder}
-          alt={company || title}
+          alt="Imagen de placeholder"
           fill
-          priority={!!img}
-          quality={80}
+          className="mask-b-from-80% object-cover"
           sizes="(max-width: 768px) 100vw, 500px"
-          className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
-          placeholder="empty"
         />
-        {/* Overlay de gradiente */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-transparent" />
       </div>
-      {/* Contenido */}
-      <div className="relative z-10 flex flex-col gap-2 p-6">
-        <span className="text-2xl font-extrabold text-white drop-shadow-lg leading-tight">{title}</span>
-        <div className="flex items-center gap-2 text-sm text-gray-200 drop-shadow">
-          <span className="font-semibold">{company}</span>
-          <span className="text-gray-400">|</span>
-          <span>{location}</span>
-        </div>
-        <span className="text-xs text-gray-300 drop-shadow mb-2">{date}</span>
-        <p className="text-base text-white/90 drop-shadow max-h-24 overflow-y-auto">{description}</p>
+      <div className="flex flex-col items-center justify-center p-4">
+        <h3 className="text-lg font-bold">{title}</h3>
+        <span className="text-xs text-gray-300 mb-2">{date}</span>
+        <ol className={`ml-4 list-disc list-inside text-start text-xs transition-all ${trunc ? 'line-clamp-2' : ''}`}>
+          {description.map((item, index) => (
+            <li key={index}>
+              {item}
+            </li>
+          ))}
+        </ol>
+        <button
+          onClick={toggleTruncate}
+          className="w-28 mt-2 bg-blue-500 p-2 text-xs text-white text-center uppercase font-bold rounded-md hover:bg-blue-700 cursor-pointer transition-all shadow-md m-auto"
+        >
+          {trunc ? 'Leer más' : 'Leer menos'}
+        </button>
       </div>
-      {/* Sombra decorativa inferior */}
-      <div className="absolute bottom-0 left-0 w-full h-6 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
-    </article>
+    </article >
   )
 }

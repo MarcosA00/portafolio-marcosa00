@@ -24,7 +24,7 @@ export default function Card({ img, title, subtitle, description, url }) {
         {url ? (
           <Link
             href={url}
-            className="w-18 bg-blue-500 p-3 text-xs text-white text-center uppercase font-bold rounded-md hover:bg-blue-700 cursor-pointer transition-all shadow-md"
+            className="w-28 bg-blue-500 p-3 text-xs text-white text-center uppercase font-bold rounded-md hover:bg-blue-700 cursor-pointer transition-all shadow-md"
           >
             Ver más...
           </Link>

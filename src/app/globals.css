@@ -1,3 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+#xp{
+  border-radius: 5px 5px 0 0;
+}
