@@ -35,7 +35,7 @@ export default function Navbar() {
           {/* Botón de menú móvil */}
           <button
             onClick={() => setMenuAbierto(!menuAbierto)}
-            className="md:hidden text-club-primary focus:outline-none focus:ring-2 focus:ring-club-primary p-2"
+            className="md:hidden text-club-primary focus:outline-none focus:ring-2 focus:ring-club-primary ml-2"
             aria-label="Abrir menú"
           >
             ☰
