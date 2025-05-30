@@ -5,7 +5,6 @@ import Imagen from '../../public/img/photo.jpeg'
 import { FaGithub } from "react-icons/fa"
 import { DiCss3, DiHtml5, DiJavascript1, DiReact } from "react-icons/di"
 import { RiBootstrapFill, RiNextjsFill, RiRemixRunFill, RiTailwindCssFill } from "react-icons/ri"
-import { BsThreeDots } from "react-icons/bs"
 import Card from "@/components/ui/Card"
 import MainCard from "@/components/ui/MainCard"
 import { proyectos } from "@/data/proyectos"
@@ -39,7 +38,7 @@ export default function Home() {
             </Link>
 
             <Link
-              href='#contacto'
+              href='#contact'
               className="w-36 bg-red-500 p-3 text-lg text-white text-center uppercase font-bold rounded-md hover:bg-red-700 cursor-pointer transition-all shadow-md"
             >
               Contáctame
