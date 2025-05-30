@@ -6,7 +6,7 @@ import Placeholder from '../../../public/img/placeholder.svg'
 export default function Card({ img, title, subtitle, description, url }) {
 
   return (
-    <article className="group relative overflow-hidden rounded-xl">
+    <article className="group max-w-[300px] relative overflow-hidden rounded-xl">
       <Image
         width={500}
         height={80}
