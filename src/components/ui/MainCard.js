@@ -13,7 +13,7 @@ export default function Card({ title, company, location, date, img, description 
   }
 
   return (
-    <article className="w-[400px] relative bg-gradient-to-t from-black/80 via-black/30 to-transparent text-white rounded-lg shadow-lg overflow-hidden">
+    <article className="w-[300px] relative bg-gradient-to-t from-black/80 via-black/30 to-transparent text-white rounded-lg shadow-lg overflow-hidden">
       <div className="relative w-full h-48">
         <Image
           src={img || Placeholder}
